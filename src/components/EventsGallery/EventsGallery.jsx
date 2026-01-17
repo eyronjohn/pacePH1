@@ -3,8 +3,10 @@ import { useEffect, useState } from "react";
 function EventsGallery() {
     const [events, setEvents] = useState([]);
 
+    // https://aaron.free.nf/index.php?url=events
+    //http://localhost/mvc_1/public/index.php?url=events
     useEffect(() => {
-        fetch("http://localhost/mvc_1/public/index.php?url=events")
+        fetch("https://aaron.free.nf/index.php?url=events")
             .then((response) => {
                 if (!response.ok) {
                     throw new Error("Network response was not ok");
